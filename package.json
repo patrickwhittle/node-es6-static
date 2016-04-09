@@ -1,0 +1,27 @@
+{
+  "name": "node-es6-static",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-cli": "^6.7.5",
+    "babel-preset-es2015-node5": "^1.2.0"
+  },
+  "scripts": {
+    "build": "babel es6 --out-dir es5 --source-maps",
+    "watch": "babel es6 --out-dir es5 --source-maps --watch",
+    "start": "node es5/app.js"
+  },
+  "dependencies": {
+    "express": "^4.13.4",
+    "source-map-support": "^0.4.0"
+  },
+  "babel": {
+    "presets": [
+      "es2015-node5"
+    ]
+  }
+}
